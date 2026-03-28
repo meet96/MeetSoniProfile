@@ -3,6 +3,19 @@
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.footer-text a {
+  color: $buttonColor;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-text a:hover {
+  color: $buttonHover;
 }
 
 .dark-mode {
@@ -10,6 +23,7 @@
 }
 
 .footer-div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid $lightBorder1;
 }

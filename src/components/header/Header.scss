@@ -10,6 +10,7 @@
 .dark-menu {
   background-color: $darkBackground !important;
   color: $textColorDark;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .dark-menu li a {
@@ -17,14 +18,17 @@
 }
 
 .dark-menu li a:hover {
-  background-color: $buttonColor !important;
+  background-color: rgba(99, 102, 241, 0.15) !important;
+  color: #a5b4fc !important;
 }
 
 .header {
   background-color: $lightBackground1;
   max-width: 100%;
-  padding: 15px 20px;
+  padding: 14px 32px;
   margin: 0px auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
 
 .header ul {
@@ -40,23 +44,29 @@
 
 .header li a {
   display: block;
-  padding: 15px 20px;
+  padding: 12px 18px;
   color: $textColor;
   text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: $headerHoverBG;
+  color: $buttonColor;
 }
 
 .header .logo {
   display: block;
   flex: none;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.4em;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 6px;
   line-height: normal;
 }
 
@@ -65,7 +75,8 @@
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 10px;
+  padding: 0 8px;
+  color: $buttonColor;
 }
 
 /* menu */

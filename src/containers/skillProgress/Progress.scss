@@ -1,23 +1,20 @@
 @import "../../_globalColor";
 
 .meter {
-  height: 20px;
+  height: 12px;
   position: relative;
   background: $progressBarBackground;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
   border-radius: 25px;
+  overflow: hidden;
 }
 .meter > span {
   display: block;
   height: 100%;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: $progressBarSpanBG;
+  border-radius: 25px;
+  background: linear-gradient(90deg, $progressBarSpanBG, #818cf8);
   position: relative;
   overflow: hidden;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .skill {
   line-height: 3.5vw;
@@ -26,12 +23,18 @@
   font-size: 28px;
   width: 40%;
 }
+.skills-heading {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .skills-container {
   display: flex;
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .skills-container > * {
   flex: 1;

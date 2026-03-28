@@ -1,33 +1,33 @@
-/* Change this file to get your personal Portfolio */
+/* Portfolio Configuration — Meet Soni */
 
-// To change portfolio colors globally go to the  _globalColor.scss file
+// To change portfolio colors globally go to the _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: true,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 1600
 };
 
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true
 };
 
 const greeting = {
   username: "Meet Soni",
-  title: "Hi all, I'm Meet",
+  title: "Hello, I'm Meet Soni",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with .NET core / Angular / React some other cool libraries and frameworks."
+    "A Full Stack Software Developer 🚀 with hands-on experience building scalable web applications using .NET Core, Angular, React, and modern cloud technologies."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/17YAAqH6J7NGj-ZXodQUpD8w1P7CTknqC/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+    "https://drive.google.com/file/d/17YAAqH6J7NGj-ZXodQUpD8w1P7CTknqC/view?usp=sharing",
+  displayGreeting: true
 };
 
 // Social Media Links
@@ -38,23 +38,24 @@ const socialMediaLinks = {
   gmail: "mksoni1627@gmail.com",
   medium: "https://medium.com/@mksoni1627",
   stackoverflow: "https://stackoverflow.com/users/8405818/meet-soni",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  display: true
 };
 
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE & LEARN NEW THINGS",
+  title: "What I Do",
+  subTitle:
+    "FULL STACK DEVELOPER PASSIONATE ABOUT BUILDING ROBUST & SCALABLE SOLUTIONS",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web applications"
+      "⚡ Build responsive, high-performance front-end interfaces with modern frameworks"
     ),
-    emoji("⚡ Create backend architecture for web applications"),
     emoji(
-      "⚡ Integration of third party services such as AWS / Azure / GCP"
+      "⚡ Design and implement scalable backend architectures and RESTful APIs"
+    ),
+    emoji(
+      "⚡ Deploy and manage cloud infrastructure on AWS, Azure & GCP"
     )
   ],
 
@@ -115,78 +116,78 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-docker"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
       schoolName: "Gujarat Technological University",
       logo: require("./assets/images/GTU.png"),
-      subHeader: "Bachelor of Engineering(CSE)",
-      duration: "June 2013 - May 2017",
-      desc: "Participated in the various coding events",
+      subHeader: "Bachelor of Engineering — Computer Science",
+      duration: "June 2013 – May 2017",
+      desc: "Focused on core computer science fundamentals and competitive programming.",
       descBullets: [
-        "Secured 1st Rank in GTU Zonal level coding competition"
+        "Secured 1st Rank in GTU Zonal-level coding competition"
       ]
     }
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
+// Proficiency Section
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: true,
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Frontend / Design",
+      progressPercentage: "90%"
     },
     {
-      Stack: "Backend",
+      Stack: "Backend Development",
       progressPercentage: "70%"
     },
     {
-      Stack: "Programming",
+      Stack: "Programming & Problem Solving",
       progressPercentage: "60%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false
 };
 
-// Work experience section
+// Work Experience Section
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true,
   experience: [
     {
-      role: "Senior Software Consulant",
+      role: "Senior Software Consultant",
       company: "Neudesic",
       companylogo: require("./assets/images/NeudesicLogo.png"),
       date: "Dec 2021 – Present",
-      desc: "Determined areas for improvement and implemented processes to alleviate problems. Monitored technology(C#, .NET Core, Python, Angular 11) use and program functionality, updating programs and making changes to enhance output."
+      desc: "Lead full-stack development of enterprise applications using C#, .NET Core, Python, and Angular. Drive architecture decisions and mentor junior developers.",
     },
     {
-      role: "Engineer 2",
+      role: "Software Engineer II",
       company: "Numerator",
       companylogo: require("./assets/images/Numerator.png"),
       date: "Jan 2019 – Feb 2021",
-      desc: "Created 100+ web crawlers using Python, C# & Angular 10 that will provide pricing insights.",
+      desc: "Built 100+ automated web crawlers using Python, C#, and Angular to deliver real-time pricing intelligence at scale.",
       descBullets: [
-        "Participated in 5+ internal hackathons & designed 3 internal utility applications."
+        "Participated in 5+ hackathons and designed 3 internal productivity tools"
       ]
     },
     {
       role: "Junior Software Developer",
-      company: "Odyssues Solutions",
+      company: "Odysseus Solutions",
       companylogo: require("./assets/images/OdyLogo.jpg"),
       date: "June 2017 – Jan 2019",
-      desc: "Implemented 5+ third-party web services into booking application & reviewed 20+ flat files.",
+      desc: "Integrated 5+ third-party web services into a travel booking platform and maintained automated data pipelines.",
       descBullets: [
-        "Collaborated on all stages of systems development lifecycle from requirement gathering to production releases."
+        "Contributed across the full SDLC — from requirements to production releases"
       ]
     }
   ]
@@ -196,32 +197,31 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: "true",
+  display: true
 };
 
-// Some big projects you have worked on
+// Big Projects
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Notable Projects",
+  subtitle: "KEY PROJECTS AND PRODUCTS I HAVE CONTRIBUTED TO",
   projects: [
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
       projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectDesc: "A healthcare platform improving access to digital health services",
       footerLink: [
         {
           name: "Visit Website",
           url: "http://saayahealth.com/"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
       image: require("./assets/images/nextuLogo.webp"),
       projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectDesc: "An ed-tech platform for Latin American professionals",
       footerLink: [
         {
           name: "Visit Website",
@@ -230,16 +230,16 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Achievement Section
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements & Certifications 🏆"),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Certifications, awards, and milestones from my professional journey.",
 
   achievementsCards: [
     {
@@ -266,7 +266,7 @@ const achievementSection = {
     {
       title: "Google Assistant Action",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
+        "Developed a Google Assistant Action JavaScript Guru available on 2 billion+ devices worldwide.",
       image: require("./assets/images/googleAssistantLogo.webp"),
       imageAlt: "Google Assistant Action Logo",
       footerLink: [
@@ -276,10 +276,9 @@ const achievementSection = {
         }
       ]
     },
-
     {
       title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
+      subtitle: "Completed PWA Web App Development certification from SMIT.",
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
@@ -291,16 +290,16 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Blogs Section
 
 const blogSection = {
-  title: "Blogs",
+  title: "Blog",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+    "I enjoy writing about things I've learned — from dev tips to deep dives into technology.",
+  displayMediumBlogs: "true",
   blogs: [
     {
       url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
@@ -315,15 +314,15 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Talks Sections
 
 const talkSection = {
-  title: "TALKS",
+  title: "Talks",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+    "I love sharing knowledge at conferences and meetups 🎤"
   ),
 
   talks: [
@@ -334,27 +333,25 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  subtitle: "I enjoy discussing technology and sharing experiences",
 
-  // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Get In Touch ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+91 9974441486",
+    "Have a project in mind or just want to connect? My inbox is always open.",
   email_address: "mksoni1627@gmail.com"
 };
 

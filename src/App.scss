@@ -28,3 +28,8 @@
 .subTitle {
   color: $subTitle;
 }
+
+::selection {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #4f46e5;
+}

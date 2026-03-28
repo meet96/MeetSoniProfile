@@ -13,24 +13,25 @@
 }
 
 .contact-title {
-  font-size: 65px;
-  font-weight: 400;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .contact-detail,
 .contact-detail-email {
   margin-top: 20px;
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 500;
   color: $subTitle;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .contact-detail:hover,
 .contact-detail-email:hover {
-  color: $textColor;
-  text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
+  color: $buttonColor;
+  transition: all 0.3s ease;
 }
 
 .contact-subtitle {

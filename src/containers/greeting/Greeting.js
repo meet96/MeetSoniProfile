@@ -24,7 +24,6 @@ export default function Greeting() {
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
-                {" "}
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
@@ -55,7 +54,7 @@ export default function Greeting() {
               <DisplayLottie animationData={landingPerson} />
             ) : (
               <img
-                alt="man sitting on table"
+                alt="Meet Soni — Full Stack Developer"
                 src={require("../../assets/images/manOnTable.svg")}
               ></img>
             )}

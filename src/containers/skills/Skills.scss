@@ -4,6 +4,7 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  align-items: center;
 }
 
 .skills-text-div {
@@ -21,17 +22,31 @@
 }
 
 .skills-heading {
-  font-size: 56px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $titleColor;
 }
 .subTitle {
   color: $subTitle;
 }
 
+.skills-text-subtitle {
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.skills-text {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .skills-heading {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media (max-width: 768px) {
@@ -51,14 +66,13 @@
     margin: 20px;
   }
   .skills-text {
-    font-size: 16px;
+    font-size: 15px;
   }
   .skills-text-subtitle {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
   }
 }

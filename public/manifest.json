@@ -1,6 +1,6 @@
 {
-  "short_name": "DeveloperFolio",
-  "name": "DeveloperFolio",
+  "short_name": "Meet Soni",
+  "name": "Meet Soni — Full Stack Developer Portfolio",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -20,6 +20,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#6c63ff",
-  "background_color": "#ffffff"
+  "theme_color": "#6366f1",
+  "background_color": "#ffffff",
+  "description": "Full Stack Software Developer specializing in .NET Core, Angular, React, and cloud technologies."
 }

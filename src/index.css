@@ -16,21 +16,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,
 body {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 17px / 1.6 Montserrat, "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #1e293b;
+  letter-spacing: -0.01em;
 }
 /* Media Query */
 @media (max-width: 1380px) {
   html,
   body {
-    font-size: rem;
-    line-height: normal;
+    font-size: 16px;
+    line-height: 1.6;
   }
 }

@@ -10,7 +10,8 @@ import {
   openSource,
   blogSection,
   talkSection,
-  achievementSection
+  achievementSection,
+  educationInfo
 } from "../../portfolio";
 
 function Header() {
@@ -21,11 +22,12 @@ function Header() {
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
+  const viewEducation = educationInfo.display;
 
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+        <a href="/" className="logo" aria-label="Meet Soni — Home">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -38,47 +40,39 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
+        <nav>
+          <ul className={isDark ? "dark-menu menu" : "menu"}>
+            {viewSkills && (
+              <li>
+                <a href="#skills">Skills</a>
+              </li>
+            )}
+            {viewEducation && (
+              <li>
+                <a href="#education">Education</a>
+              </li>
+            )}
+            {viewExperience && (
+              <li>
+                <a href="#experience">Experience</a>
+              </li>
+            )}
+            {viewBlog && (
+              <li>
+                <a href="#blogs">Blog</a>
+              </li>
+            )}
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#contact">Contact</a>
             </li>
-          )}
-          {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>
+                <ToggleSwitch />
+              </a>
             </li>
-          )}
-          {/* {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )} */}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {/* {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )} */}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
-          </li>
-        </ul>
+          </ul>
+        </nav>
       </header>
     </Headroom>
   );

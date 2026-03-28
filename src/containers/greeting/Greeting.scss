@@ -15,14 +15,11 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -31,18 +28,23 @@
 }
 .button-greeting-div {
   display: flex;
-  margin-top: 20px;
+  margin-top: 28px;
+  gap: 12px;
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 64px;
   line-height: 1.1;
   color: $textColor !important;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-top: 16px;
+  max-width: 540px;
 }
 
 .greeting-image-div > img {
@@ -85,24 +87,26 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 48px;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
   }
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.6;
     text-align: center;
+    max-width: 100%;
   }
   .greeting-main {
     display: block;
