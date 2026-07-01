@@ -5,9 +5,9 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardFooter,
+  CardFooter
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import {Badge} from "@/components/ui/badge";
 
 export function ProjectCard({
   title,
@@ -15,7 +15,7 @@ export function ProjectCard({
   href,
   image,
   meta,
-  external = false,
+  external = false
 }: {
   title: string;
   description: string;
@@ -28,7 +28,13 @@ export function ProjectCard({
     <Card className="h-full transition-colors group-hover:border-primary/50">
       {image && (
         <div className="mx-6 flex h-12 items-center">
-          <Image src={image} alt={title} width={40} height={40} className="object-contain" />
+          <Image
+            src={image}
+            alt={title}
+            width={40}
+            height={40}
+            className="object-contain"
+          />
         </div>
       )}
       <CardHeader>
@@ -45,7 +51,12 @@ export function ProjectCard({
 
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noreferrer noopener" className="group block">
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer noopener"
+        className="group block"
+      >
         {content}
       </a>
     );

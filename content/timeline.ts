@@ -18,7 +18,7 @@ export const timeline: TimelineEntry[] = [
     start: "Dec 2021",
     end: "Present",
     description:
-      "Lead full-stack development of enterprise applications using C#, .NET Core, Python, and Angular. Drive architecture decisions and mentor junior developers.",
+      "Lead full-stack development of enterprise applications using C#, .NET Core, Python, and Angular. Drive architecture decisions and mentor junior developers."
   },
   {
     type: "work",
@@ -30,8 +30,8 @@ export const timeline: TimelineEntry[] = [
     description:
       "Built 100+ automated web crawlers using Python, C#, and Angular to deliver real-time pricing intelligence at scale.",
     bullets: [
-      "Participated in 5+ hackathons and designed 3 internal productivity tools",
-    ],
+      "Participated in 5+ hackathons and designed 3 internal productivity tools"
+    ]
   },
   {
     type: "work",
@@ -43,8 +43,8 @@ export const timeline: TimelineEntry[] = [
     description:
       "Integrated 5+ third-party web services into a travel booking platform and maintained automated data pipelines.",
     bullets: [
-      "Contributed across the full SDLC — from requirements to production releases",
-    ],
+      "Contributed across the full SDLC — from requirements to production releases"
+    ]
   },
   {
     type: "education",
@@ -55,6 +55,6 @@ export const timeline: TimelineEntry[] = [
     end: "May 2017",
     description:
       "Focused on core computer science fundamentals and competitive programming.",
-    bullets: ["Secured 1st Rank in GTU Zonal-level coding competition"],
-  },
+    bullets: ["Secured 1st Rank in GTU Zonal-level coding competition"]
+  }
 ];

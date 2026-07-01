@@ -1,23 +1,23 @@
 "use client";
 
 import * as React from "react";
-import { toast } from "sonner";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import {toast} from "sonner";
+import {z} from "zod";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required"),
   email: z.string().trim().email("Enter a valid email"),
-  message: z.string().trim().min(1, "Message is required"),
+  message: z.string().trim().min(1, "Message is required")
 });
 
 type FormState = z.infer<typeof contactSchema>;
 type FormErrors = Partial<Record<keyof FormState, string>>;
 
-const initialState: FormState = { name: "", email: "", message: "" };
+const initialState: FormState = {name: "", email: "", message: ""};
 
 export function ContactForm() {
   const [values, setValues] = React.useState<FormState>(initialState);
@@ -43,8 +43,8 @@ export function ContactForm() {
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(result.data),
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(result.data)
       });
 
       if (!res.ok) {
@@ -63,16 +63,21 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-md flex-col gap-4">
+    <form
+      onSubmit={handleSubmit}
+      className="flex w-full max-w-md flex-col gap-4"
+    >
       <div className="flex flex-col gap-1.5">
         <Label htmlFor="name">Name</Label>
         <Input
           id="name"
           value={values.name}
-          onChange={(e) => setValues((v) => ({ ...v, name: e.target.value }))}
+          onChange={e => setValues(v => ({...v, name: e.target.value}))}
           aria-invalid={!!errors.name}
         />
-        {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
+        {errors.name && (
+          <p className="text-sm text-destructive">{errors.name}</p>
+        )}
       </div>
       <div className="flex flex-col gap-1.5">
         <Label htmlFor="email">Email</Label>
@@ -80,10 +85,12 @@ export function ContactForm() {
           id="email"
           type="email"
           value={values.email}
-          onChange={(e) => setValues((v) => ({ ...v, email: e.target.value }))}
+          onChange={e => setValues(v => ({...v, email: e.target.value}))}
           aria-invalid={!!errors.email}
         />
-        {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+        {errors.email && (
+          <p className="text-sm text-destructive">{errors.email}</p>
+        )}
       </div>
       <div className="flex flex-col gap-1.5">
         <Label htmlFor="message">Message</Label>
@@ -91,10 +98,12 @@ export function ContactForm() {
           id="message"
           rows={5}
           value={values.message}
-          onChange={(e) => setValues((v) => ({ ...v, message: e.target.value }))}
+          onChange={e => setValues(v => ({...v, message: e.target.value}))}
           aria-invalid={!!errors.message}
         />
-        {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+        {errors.message && (
+          <p className="text-sm text-destructive">{errors.message}</p>
+        )}
       </div>
       <Button type="submit" disabled={submitting} className="w-fit">
         {submitting ? "Sending…" : "Send Message"}

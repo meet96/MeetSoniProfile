@@ -1,5 +1,5 @@
-import { siteConfig } from "@/content/site-config";
-import { SocialLinks } from "@/components/site/social-links";
+import {siteConfig} from "@/content/site-config";
+import {SocialLinks} from "@/components/site/social-links";
 
 export function Footer() {
   return (

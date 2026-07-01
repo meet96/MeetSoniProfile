@@ -1,31 +1,31 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import type {Metadata} from "next";
+import {notFound} from "next/navigation";
 import Image from "next/image";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { getAllProjects, getProjectBySlug } from "@/lib/mdx";
-import { Badge } from "@/components/ui/badge";
+import {MDXRemote} from "next-mdx-remote/rsc";
+import {getAllProjects, getProjectBySlug} from "@/lib/mdx";
+import {Badge} from "@/components/ui/badge";
 
 export function generateStaticParams() {
-  return getAllProjects().map((project) => ({ slug: project.slug }));
+  return getAllProjects().map(project => ({slug: project.slug}));
 }
 
 export async function generateMetadata({
-  params,
+  params
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{slug: string}>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const {slug} = await params;
   const project = getProjectBySlug(slug);
   if (!project) return {};
-  return { title: project.title, description: project.summary };
+  return {title: project.title, description: project.summary};
 }
 
 export default async function ProjectPage({
-  params,
+  params
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{slug: string}>;
 }) {
-  const { slug } = await params;
+  const {slug} = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
@@ -47,7 +47,7 @@ export default async function ProjectPage({
         <p className="text-lg text-muted-foreground">{project.summary}</p>
         {project.stack && project.stack.length > 0 && (
           <div className="flex flex-wrap gap-2">
-            {project.stack.map((tech) => (
+            {project.stack.map(tech => (
               <Badge key={tech} variant="secondary">
                 {tech}
               </Badge>

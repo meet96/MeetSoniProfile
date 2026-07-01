@@ -26,11 +26,11 @@ export const siteConfig = {
       "AWS",
       "Azure",
       "Web Developer",
-      "Portfolio",
+      "Portfolio"
     ],
     siteUrl: "https://meetsoni.dev",
-    themeColor: "#6366f1",
-  },
+    themeColor: "#6366f1"
+  }
 } as const;
 
 export const socialLinks = {
@@ -38,15 +38,15 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/in/meet-soni-755774a6/",
   email: "mailto:mksoni1627@gmail.com",
   medium: "https://medium.com/@mksoni1627",
-  stackoverflow: "https://stackoverflow.com/users/8405818/meet-soni",
+  stackoverflow: "https://stackoverflow.com/users/8405818/meet-soni"
 } as const;
 
 export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  {href: "/", label: "Home"},
+  {href: "/about", label: "About"},
+  {href: "/projects", label: "Projects"},
+  {href: "/blog", label: "Blog"},
+  {href: "/contact", label: "Contact"}
 ] as const;
 
 export const skillsSection = {
@@ -56,7 +56,7 @@ export const skillsSection = {
   bullets: [
     "Build responsive, high-performance front-end interfaces with modern frameworks",
     "Design and implement scalable backend architectures and RESTful APIs",
-    "Deploy and manage cloud infrastructure on AWS, Azure & GCP",
+    "Deploy and manage cloud infrastructure on AWS, Azure & GCP"
   ],
   stack: [
     "HTML5",
@@ -71,12 +71,12 @@ export const skillsSection = {
     "AWS",
     "Azure",
     "Python",
-    "Docker",
-  ],
+    "Docker"
+  ]
 } as const;
 
 export const proficiency = [
-  { label: "Frontend / Design", percent: 90 },
-  { label: "Backend Development", percent: 70 },
-  { label: "Programming & Problem Solving", percent: 60 },
+  {label: "Frontend / Design", percent: 90},
+  {label: "Backend Development", percent: 70},
+  {label: "Programming & Problem Solving", percent: 60}
 ] as const;

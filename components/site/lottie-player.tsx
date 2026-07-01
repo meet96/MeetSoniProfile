@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 
 export function LottiePlayer({
   animationData,
-  className,
+  className
 }: {
   animationData: object;
   className?: string;

@@ -1,12 +1,17 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/mdx";
-import { socialLinks } from "@/content/site-config";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {getAllPosts} from "@/lib/mdx";
+import {socialLinks} from "@/content/site-config";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription
+} from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Writing on software engineering from Meet Soni.",
+  description: "Writing on software engineering from Meet Soni."
 };
 
 export default function BlogPage() {
@@ -36,11 +41,17 @@ export default function BlogPage() {
         </p>
       ) : (
         <div className="flex flex-col gap-4">
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+          {posts.map(post => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group block"
+            >
               <Card className="transition-colors group-hover:border-primary/50">
                 <CardHeader>
-                  <CardTitle className="group-hover:text-primary">{post.title}</CardTitle>
+                  <CardTitle className="group-hover:text-primary">
+                    {post.title}
+                  </CardTitle>
                   <CardDescription>{post.excerpt}</CardDescription>
                 </CardHeader>
               </Card>

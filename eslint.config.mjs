@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Old CRA app, kept for reference during the Next.js migration.
+    "legacy-cra/**",
   ]),
 ]);
 

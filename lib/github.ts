@@ -5,7 +5,7 @@ export type PinnedRepo = {
   url: string;
   forkCount: number;
   stars: number;
-  primaryLanguage: { name: string; color: string } | null;
+  primaryLanguage: {name: string; color: string} | null;
 };
 
 const PINNED_REPOS_QUERY = `
@@ -39,12 +39,12 @@ export async function getPinnedRepos(): Promise<PinnedRepo[]> {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        query: PINNED_REPOS_QUERY.replace("$USERNAME", username),
+        query: PINNED_REPOS_QUERY.replace("$USERNAME", username)
       }),
-      next: { revalidate: 3600 },
+      next: {revalidate: 3600}
     });
 
     if (!res.ok) return [];
@@ -52,9 +52,9 @@ export async function getPinnedRepos(): Promise<PinnedRepo[]> {
     const json = await res.json();
     const edges = json?.data?.user?.pinnedItems?.edges ?? [];
 
-    return edges.map((edge: { node: Record<string, unknown> }) => {
+    return edges.map((edge: {node: Record<string, unknown>}) => {
       const node = edge.node;
-      const stargazers = node.stargazers as { totalCount: number };
+      const stargazers = node.stargazers as {totalCount: number};
       return {
         id: node.id,
         name: node.name,
@@ -62,7 +62,7 @@ export async function getPinnedRepos(): Promise<PinnedRepo[]> {
         url: node.url,
         forkCount: node.forkCount,
         stars: stargazers.totalCount,
-        primaryLanguage: node.primaryLanguage as PinnedRepo["primaryLanguage"],
+        primaryLanguage: node.primaryLanguage as PinnedRepo["primaryLanguage"]
       };
     });
   } catch {

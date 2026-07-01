@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { SocialLinks } from "@/components/site/social-links";
-import { LottiePlayer } from "@/components/site/lottie-player";
-import { ContactForm } from "@/components/sections/contact-form";
+import type {Metadata} from "next";
+import {SocialLinks} from "@/components/site/social-links";
+import {LottiePlayer} from "@/components/site/lottie-player";
+import {ContactForm} from "@/components/sections/contact-form";
 import email from "@/content/lottie/email.json";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Meet Soni.",
+  description: "Get in touch with Meet Soni."
 };
 
 export default function ContactPage() {
@@ -15,7 +15,8 @@ export default function ContactPage() {
       <div className="flex flex-col items-start gap-6">
         <h1 className="font-heading text-3xl font-semibold">Get In Touch</h1>
         <p className="max-w-md text-muted-foreground">
-          Have a project in mind or just want to connect? My inbox is always open.
+          Have a project in mind or just want to connect? My inbox is always
+          open.
         </p>
         <ContactForm />
         <SocialLinks />

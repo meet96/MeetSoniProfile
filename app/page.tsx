@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { SocialLinks } from "@/components/site/social-links";
-import { LottiePlayer } from "@/components/site/lottie-player";
-import { siteConfig } from "@/content/site-config";
+import {Button} from "@/components/ui/button";
+import {SocialLinks} from "@/components/site/social-links";
+import {LottiePlayer} from "@/components/site/lottie-player";
+import {siteConfig} from "@/content/site-config";
 import landingPerson from "@/content/lottie/landingPerson.json";
 
 export default function Home() {
@@ -24,7 +24,13 @@ export default function Home() {
           <Button
             nativeButton={false}
             variant="outline"
-            render={<a href={siteConfig.resumeLink} target="_blank" rel="noreferrer noopener" />}
+            render={
+              <a
+                href={siteConfig.resumeLink}
+                target="_blank"
+                rel="noreferrer noopener"
+              />
+            }
           >
             See My Resume
           </Button>
