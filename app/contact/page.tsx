@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/site/social-links";
 import { LottiePlayer } from "@/components/site/lottie-player";
-import { siteConfig, socialLinks } from "@/content/site-config";
+import { ContactForm } from "@/components/sections/contact-form";
 import email from "@/content/lottie/email.json";
 
 export const metadata: Metadata = {
@@ -18,9 +17,7 @@ export default function ContactPage() {
         <p className="max-w-md text-muted-foreground">
           Have a project in mind or just want to connect? My inbox is always open.
         </p>
-        <Button nativeButton={false} render={<a href={socialLinks.email} />}>
-          {siteConfig.contactEmail}
-        </Button>
+        <ContactForm />
         <SocialLinks />
       </div>
       <div className="mx-auto w-full max-w-sm md:max-w-none">

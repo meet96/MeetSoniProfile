@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getPinnedRepos } from "@/lib/github";
-import { notableProjects } from "@/content/projects";
+import { getAllProjects } from "@/lib/mdx";
 import { ProjectCard } from "@/components/sections/project-card";
 
 export const metadata: Metadata = {
@@ -9,7 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default async function ProjectsPage() {
-  const pinnedRepos = await getPinnedRepos();
+  const [pinnedRepos, projects] = await Promise.all([
+    getPinnedRepos(),
+    Promise.resolve(getAllProjects()),
+  ]);
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-16 sm:py-24">
@@ -21,13 +24,13 @@ export default async function ProjectsPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {notableProjects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.slug}
-              title={project.name}
-              description={project.description}
-              href={project.url}
-              image={project.image}
+              title={project.title}
+              description={project.summary}
+              href={`/projects/${project.slug}`}
+              image={project.coverImage}
             />
           ))}
         </div>
@@ -48,6 +51,7 @@ export default async function ProjectsPage() {
                 title={repo.name}
                 description={repo.description ?? ""}
                 href={repo.url}
+                external
                 meta={
                   repo.primaryLanguage
                     ? `${repo.primaryLanguage.name} · ★ ${repo.stars}`
