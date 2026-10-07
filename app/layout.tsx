@@ -1,5 +1,6 @@
 import type {Metadata, Viewport} from "next";
 import {Inter, Newsreader} from "next/font/google";
+import {Logo} from "@/components/Logo";
 import {profile} from "@/data/profile";
 import "./globals.css";
 
@@ -31,19 +32,20 @@ export const metadata: Metadata = {
     type: "profile",
     url: "/"
   },
-  twitter: {card: "summary"},
-  icons: {icon: "/favicon.ico", apple: "/apple-touch-icon.png"}
+  twitter: {card: "summary"}
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    {media: "(prefers-color-scheme: light)", color: "#faf9f7"},
-    {media: "(prefers-color-scheme: dark)", color: "#121212"}
+    {media: "(prefers-color-scheme: light)", color: "#fafaf9"},
+    {media: "(prefers-color-scheme: dark)", color: "#0b0d12"}
   ]
 };
 
-// Applies the saved/system theme before paint to avoid a light-mode flash.
-const themeScript = `(function(){try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}})()`;
+// Runs before paint: applies the saved/system theme (no flash), enables
+// JS-only animations, and plays the intro once per session unless the
+// visitor prefers reduced motion.
+const bootScript = `(function(){var d=document.documentElement;try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t}catch(e){}d.classList.add("js");try{if(!sessionStorage.getItem("intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("intro");sessionStorage.setItem("intro","1")}}catch(e){}})()`;
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
@@ -53,9 +55,15 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{__html: themeScript}} />
+        <script dangerouslySetInnerHTML={{__html: bootScript}} />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="intro-overlay" aria-hidden="true">
+          <Logo className="intro-logo" />
+          <div className="intro-bar" />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

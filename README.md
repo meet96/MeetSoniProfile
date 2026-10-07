@@ -13,7 +13,7 @@ npm run lint       # type-check
 
 ## Edit content
 
-All content lives in [`data/profile.ts`](data/profile.ts) — experience, skills, certifications, education and links. Wrap text in `**double asterisks**` to highlight it. Replace `public/Meet_Soni_Resume.pdf` to update the downloadable résumé.
+All content lives in [`data/profile.ts`](data/profile.ts) — experience, skills, certifications, education and links. Wrap text in `**double asterisks**` to highlight it. Replace `public/Meet_Soni_Resume.pdf` to update the downloadable résumé. The favicon is `app/icon.svg` (with `app/apple-icon.png` for iOS); colours and motion live in `app/globals.css`, and all animations respect `prefers-reduced-motion`.
 
 ## Deploy (Netlify)
 
